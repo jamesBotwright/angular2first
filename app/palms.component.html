@@ -1,0 +1,12 @@
+<h2>My Palms</h2> 
+<ul class="palms">
+  <li *ngFor="let palm of palms"
+    [class.selected]="palm === selectedPalm"
+    (click)="onSelect(palm)">
+    <span class="badge">{{palm.id}}</span> {{palm.name}}
+  </li> </ul> <div *ngIf="selectedPalm">
+  <h2>
+    {{selectedPalm.name | uppercase}} is my palm
+  </h2>
+  <button (click)="gotoDetail()">View Details</button>
+</div>

@@ -1,0 +1,9 @@
+<h3>Top Palms</h3>
+<div class="grid grid-pad">
+  <div *ngFor="let palm of palms" (click)="gotoDetail(palm)" class="col-1-4">
+    <div class="module palm">
+      <h4>{{palm.name}}</h4>
+    </div>
+  </div>
+</div>
+
